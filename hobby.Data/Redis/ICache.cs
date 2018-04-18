@@ -25,7 +25,7 @@ namespace hobby.Data.Redis
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
-        T Get<T>();
+        T Get<T>(string key);
 
         /// <summary>
         ///从缓存中移除指定的键值

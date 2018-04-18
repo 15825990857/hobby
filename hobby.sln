@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.27428.2015
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hobby.Data", "hobby.Data\hobby.Data.csproj", "{FC3A154D-BAB3-4FF8-8488-FFA2EDC37729}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hobby.web", "hobby.web\hobby.web.csproj", "{44B1A32D-1772-48E3-A3C3-C562EF890611}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC3A154D-BAB3-4FF8-8488-FFA2EDC37729}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC3A154D-BAB3-4FF8-8488-FFA2EDC37729}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC3A154D-BAB3-4FF8-8488-FFA2EDC37729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44B1A32D-1772-48E3-A3C3-C562EF890611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44B1A32D-1772-48E3-A3C3-C562EF890611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44B1A32D-1772-48E3-A3C3-C562EF890611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44B1A32D-1772-48E3-A3C3-C562EF890611}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

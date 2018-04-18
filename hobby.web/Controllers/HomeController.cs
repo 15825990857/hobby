@@ -1,4 +1,5 @@
-﻿using System;
+﻿using hobby.Data.Redis;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,9 @@ namespace hobby.web.Controllers
     {
         public ActionResult Index()
         {
+             RedisManager redis = new RedisManager();
+             redis.Insert("user","ygs");
+            var userG = redis.Get("user");
             return View();
         }
 

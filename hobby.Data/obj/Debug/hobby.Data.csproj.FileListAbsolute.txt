@@ -28,7 +28,6 @@ C:\Users\Andy\source\repos\hobby\hobby.Data\bin\Debug\System.Web.WebPages.Deploy
 C:\Users\Andy\source\repos\hobby\hobby.Data\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\Andy\source\repos\hobby\hobby.Data\bin\Debug\zh-Hans\EntityFramework.resources.dll
 C:\Users\Andy\source\repos\hobby\hobby.Data\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
-C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.csprojResolveAssemblyReference.cache
 C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.csproj.CoreCompileInputs.cache
 C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.csproj.CopyComplete
 C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.dll

@@ -54,22 +54,36 @@ namespace hobby.Data.Redis
 
         public object Get(string key)
         {
-            throw new NotImplementedException();
+            return Get<object>(key);
         }
 
-        public T Get<T>()
+        public T Get<T>(string key)
         {
-            throw new NotImplementedException();
+            DateTime begin = DateTime.Now;
+            var cacheValue = database.StringGet(key);
+            DateTime endCache = DateTime.Now;
+            var value = default(T);
+            if (!cacheValue.IsNull)
+            {
+                var cacheObject = JsonConvert.DeserializeObject<CacheObject<T>>(cacheValue, jsonConfig);
+                if (!cacheObject.ForceOutofDate)
+                    database.KeyExpire(key, new TimeSpan(0, 0, cacheObject.ExpireTime));
+                value = cacheObject.Value;
+            }
+            DateTime endJson = DateTime.Now;
+            return value;
         }
 
         public void Insert(string key, object data)
         {
-            throw new NotImplementedException();
+            var jsonData = GetJsonData(data, TimeOut, false);
+            database.StringSet(key, jsonData);
         }
 
         public void Insert<T>(string key, T data)
         {
-            throw new NotImplementedException();
+            var jsonData = GetJsonData<T>(data, TimeOut, false);
+            database.StringSet(key, jsonData);
         }
 
         public void Insert(string key, object data, int cacheTime)
@@ -81,5 +95,19 @@ namespace hobby.Data.Redis
         {
             throw new NotImplementedException();
         }
+
+        string GetJsonData(object data, int cacheTime, bool forceOutOfDate)
+        {
+            var cacheObject = new CacheObject<object>() { Value = data, ExpireTime = cacheTime, ForceOutofDate = forceOutOfDate };
+            return JsonConvert.SerializeObject(cacheObject, jsonConfig);//序列化对象
+        }
+
+        string GetJsonData<T>(T data, int cacheTime, bool forceOutOfDate)
+        {
+            var cacheObject = new CacheObject<T>() { Value = data, ExpireTime = cacheTime, ForceOutofDate = forceOutOfDate };
+            return JsonConvert.SerializeObject(cacheObject, jsonConfig);//序列化对象
+        }
+
+       
     }
 }
