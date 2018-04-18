@@ -12,9 +12,14 @@ namespace hobby.web.Controllers
         public ActionResult Index()
         {
              RedisManager redis = new RedisManager();
-             redis.Insert("user","ygs");
-            var userG = redis.Get("user");
+             CacheManager cache = new CacheManager();
+            //redis.Insert("user","ygs");
+            cache.Insert("user","木椅子按");
+            var userR = redis.Get("user");
+            var userC = cache.Get("user");
             return View();
+
+
         }
 
         public ActionResult About()
