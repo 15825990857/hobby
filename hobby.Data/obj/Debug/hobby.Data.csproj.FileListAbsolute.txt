@@ -32,3 +32,4 @@ C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.csproj.CoreComp
 C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.csproj.CopyComplete
 C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.dll
 C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.pdb
+C:\Users\Andy\source\repos\hobby\hobby.Data\obj\Debug\hobby.Data.csprojResolveAssemblyReference.cache
