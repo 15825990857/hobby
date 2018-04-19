@@ -84,7 +84,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataHelp\BaseRepertory.cs" />
+    <Compile Include="DataHelp\IBaseRepertory.cs" />
+    <Compile Include="DefaultHobbyContext.cs" />
     <Compile Include="HobbyContext.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Redis\CacheManager.cs" />
     <Compile Include="Redis\ICache.cs" />
@@ -94,6 +98,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\hobby.Core\hobby.Core.csproj">
+      <Project>{96b94f11-82e3-412f-8254-92d91b1d896b}</Project>
+      <Name>hobby.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

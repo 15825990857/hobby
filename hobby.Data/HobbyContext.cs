@@ -1,21 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using hobby.Core.Model;
+using System;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace hobby.Data
 {
     public class HobbyContext:DbContext
     {
+        static HobbyContext()
+        {
+            Database.SetInitializer(new CreateDatabaseIfNotExists<HobbyContext>());
+        }
         public HobbyContext():base("name=hobbyContext")
         {
 
         }
 
+        public DbSet<User> user { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
@@ -23,5 +26,7 @@ namespace hobby.Data
             modelBuilder.Configurations.AddFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
+
+      
     }
 }

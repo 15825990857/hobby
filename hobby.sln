@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hobby.Common", "hobby.Commo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hobby.Cenum", "hobby.Cenum\hobby.Cenum.csproj", "{A494BA92-F7DB-4489-9C0F-B9BCBFAA9F29}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "hobby.Service", "hobby.Service\hobby.Service.csproj", "{4727673A-D4AD-42E7-9D54-4E71290066DF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{A494BA92-F7DB-4489-9C0F-B9BCBFAA9F29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A494BA92-F7DB-4489-9C0F-B9BCBFAA9F29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A494BA92-F7DB-4489-9C0F-B9BCBFAA9F29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4727673A-D4AD-42E7-9D54-4E71290066DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4727673A-D4AD-42E7-9D54-4E71290066DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4727673A-D4AD-42E7-9D54-4E71290066DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4727673A-D4AD-42E7-9D54-4E71290066DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

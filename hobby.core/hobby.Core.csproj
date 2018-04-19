@@ -55,11 +55,5 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\hobby.Data\hobby.Data.csproj">
-      <Project>{fc3a154d-bab3-4ff8-8488-ffa2edc37729}</Project>
-      <Name>hobby.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
