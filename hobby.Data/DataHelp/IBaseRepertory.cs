@@ -8,7 +8,7 @@ namespace hobby.Data.DataHelp
 {
    public interface IBaseRepertory<TEntity> where TEntity:class
     {
-        List<TEntity> GetList();
+        
         TEntity GetByid(object id);
     }
 }

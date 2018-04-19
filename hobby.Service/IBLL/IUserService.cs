@@ -11,5 +11,6 @@ namespace hobby.Service.IBLL
    public interface IUserService: IBaseRepertory<User>
     {
         User Login(string name, string pwd);
+        List<User> GetList();
     }
 }

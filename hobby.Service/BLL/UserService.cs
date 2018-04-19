@@ -13,11 +13,10 @@ namespace hobby.Service.BLL
     public class UserService : BaseRepertory<User>, IUserService
     {
          
-        
+  
         public User Login(string name, string pwd)
         {
-         
-            throw new NotImplementedException();
+            return dbset.FirstOrDefault(p => p.Name.Equals(name) & p.Pwd.Equals(pwd));
         }
     }
 }
