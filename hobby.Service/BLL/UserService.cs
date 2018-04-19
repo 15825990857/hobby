@@ -16,7 +16,7 @@ namespace hobby.Service.BLL
         
         public User Login(string name, string pwd)
         {
-          
+         
             throw new NotImplementedException();
         }
     }
