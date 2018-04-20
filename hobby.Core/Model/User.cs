@@ -16,7 +16,7 @@ namespace hobby.Core.Model
          [MaxLength(250)]
         public string Name { get; set; }
         public string Pwd { get; set; }
-        public DateTime Addtime { get; set; }
+        public string Addtime { get; set; }
         public int Status { get; set; }
       
         

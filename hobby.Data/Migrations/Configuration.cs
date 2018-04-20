@@ -1,5 +1,7 @@
 namespace hobby.Data.Migrations
 {
+    using hobby.Common;
+    using hobby.Core.Model;
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
@@ -14,10 +16,15 @@ namespace hobby.Data.Migrations
 
         protected override void Seed(hobby.Data.HobbyContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            context.user.AddOrUpdate(p =>
+              p.Name,
+              new User {
+                  Name = "admin",
+                  Addtime = DateTime.Now.ToShortDateString(),
+                  Pwd = Encrypt.EncryptMD5By32("000000"),
+                  Status = 0
+              }
+            );
         }
     }
 }
