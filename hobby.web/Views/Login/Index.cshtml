@@ -72,18 +72,33 @@
             if (IsNull("name"))
             {
                 $("#ts").html("请输入用户名！").show();
-                $("#userName").focus();
+                $("#name").focus();
                 return false;
             }
            
             if (IsNull("pwd"))
             {
                 $("#ts").html("请输入密码！").show();
-                $("#password").focus();
+                $("#pwd").focus();
                 return false;
             }
-
-            $.post()
+            var data = {
+                name:$('#name').val(),
+                pwd:$('#pwd').val()
+            }
+            
+            
+            $.post("/Login/LoginIn", { name: $('#name').val(), pwd: $('#pwd').val() }, function (result)
+            {
+                if (result.status == '1')
+                {
+                    window.location.href="/Home/index"
+                }
+                else
+                {
+                    $("#ts").html(result.message).show();
+                }
+            })
         }
     </script>
 

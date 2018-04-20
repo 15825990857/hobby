@@ -50,10 +50,17 @@
     <Compile Include="Mapping\UserMapping.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ResultInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\hobby.Cenum\hobby.Cenum.csproj">
+      <Project>{A494BA92-F7DB-4489-9C0F-B9BCBFAA9F29}</Project>
+      <Name>hobby.Cenum</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
