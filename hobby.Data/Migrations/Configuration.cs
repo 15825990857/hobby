@@ -20,7 +20,7 @@ namespace hobby.Data.Migrations
               p.Name,
               new User {
                   Name = "admin",
-                  Addtime = DateTime.Now.ToShortDateString(),
+                  Addtime = DateTime.Now.Date.ToShortDateString(),
                   Pwd = Encrypt.EncryptMD5By32("000000"),
                   Status = 0
               }

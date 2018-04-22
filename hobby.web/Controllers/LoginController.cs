@@ -1,7 +1,9 @@
-﻿using hobby.Core;
+﻿using hobby.Common;
+using hobby.Core;
 using hobby.Core.Model;
 using hobby.Data.DataHelp;
 using hobby.Data.LogNet;
+using hobby.Service.BLL;
 using hobby.Service.IBLL;
 using System;
 using System.Collections.Generic;
@@ -14,6 +16,10 @@ namespace hobby.web.Controllers
     public class LoginController : Controller
     {
         public IUserService _userService;
+        public LoginController()
+        {
+            _userService = new UserService();
+        }
         public LoginController(IUserService userService)
         {
             _userService = userService;
@@ -28,7 +34,7 @@ namespace hobby.web.Controllers
         [HttpPost]
         public JsonResult LoginIn(string name,string pwd)
         {
-            
+            pwd = Encrypt.EncryptMD5By32(pwd);
            var model= _userService.Login(name,pwd);
             ResultInfo info = new ResultInfo();
             if (model == null)
