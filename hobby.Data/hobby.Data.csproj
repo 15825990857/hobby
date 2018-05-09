@@ -37,6 +37,9 @@
     <Reference Include="Autofac.Integration.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.Mvc5.4.0.2\lib\net45\Autofac.Integration.Mvc.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=1.50.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.1.50.4\lib\net451\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -89,6 +92,17 @@
   <ItemGroup>
     <Compile Include="DataHelp\BaseRepertory.cs" />
     <Compile Include="DataHelp\IBaseRepertory.cs" />
+    <Compile Include="DataHelp\SqlHelper\Core\DataBase.cs" />
+    <Compile Include="DataHelp\SqlHelper\Core\DataReaderExtensions.cs" />
+    <Compile Include="DataHelp\SqlHelper\Core\SqlDataBase.cs" />
+    <Compile Include="DataHelp\SqlHelper\Core\SqlStatementFactory.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\CRUDExtension.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\Dialect.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\Impl\PropertyInfoExtensions.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\Impl\Protect.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\Impl\TypeExtensions.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\Kernel.cs" />
+    <Compile Include="DataHelp\SqlHelper\Dapper.Extension\StatementFactory.cs" />
     <Compile Include="DefaultHobbyContext.cs" />
     <Compile Include="HobbyContext.cs" />
     <Compile Include="LogNet\LogMappingNet.cs" />
@@ -112,8 +126,6 @@
       <Name>hobby.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataHelp\SqlHelper\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

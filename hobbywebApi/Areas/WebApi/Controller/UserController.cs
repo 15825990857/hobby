@@ -48,6 +48,12 @@ namespace hobbywebApi.Areas.WebApi.Controller
         {
             return ResultView<User>.InitFromList(_userService.GetList());
         }
+
+        public ResultView<User> GetByID(int id)
+        {
+            var db = new SqlDataBase();
+            return ResultView<User>.InitFromList();
+        }
  
     }
 }
