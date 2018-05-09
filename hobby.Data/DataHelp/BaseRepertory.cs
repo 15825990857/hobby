@@ -30,5 +30,7 @@ namespace hobby.Data.DataHelp
         {
             return dbset.Find(id);
         }
+
+        
     }
 }

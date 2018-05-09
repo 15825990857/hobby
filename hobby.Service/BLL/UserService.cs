@@ -16,5 +16,10 @@ namespace hobby.Service.BLL
         {
             return dbset.FirstOrDefault(p => p.Name.Equals(name) & p.Pwd.Equals(pwd));
         }
+
+        public List<User> GetList()
+        {
+            return dbset.ToList();
+        }
     }
 }
