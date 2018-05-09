@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Mapping\MenuMapping.cs" />
     <Compile Include="Mapping\UserMapping.cs" />
     <Compile Include="Model\Menu.cs" />
     <Compile Include="Model\User.cs" />
