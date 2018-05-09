@@ -19,6 +19,7 @@ namespace hobby.Data
         }
 
         public DbSet<User> user { get; set; }
+        public DbSet<Menu> menu { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
